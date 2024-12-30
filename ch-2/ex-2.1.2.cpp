@@ -38,6 +38,7 @@ void _insertionSortNonIncreasing(vector<int> &A)
     }
 }
 
+// Complexity: O(n^2) in time, O(1) in space.
 void insertionSort(vector<int> &A, bool reverse = false)
 {
     size_t A_size = A.size();
