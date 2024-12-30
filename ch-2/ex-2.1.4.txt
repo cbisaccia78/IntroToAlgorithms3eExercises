@@ -1,0 +1,23 @@
+Consider the problem of adding two n-bit binary integers, stored in two n-element
+arrays A and B. The sum of the two integers should be stored in binary form in
+an (n+1) element array C. State the problem formally and write pseudocode for
+adding the two integers.
+
+FORMAL PROBLEM STATEMENT:
+
+Input: Two n-element bit-arrays.
+Output:  An (n+1) element bit-array containing the sum of the first 2 arrays, interpreted
+as integers.
+
+PSEUDOCODE:
+[1,0,1]
+[1,1,1]
+
+CARRY = 0
+for i=n downto 1
+    C[i+1] = (A[i] + B[i] + CARRY) % 2
+    if A[i] + B[i] + CARRY >= 2
+        CARRY = 1
+    else
+        CARRY = 0
+C[i] = CARRY
