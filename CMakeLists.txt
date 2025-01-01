@@ -7,6 +7,11 @@ project(IntroToAlgorithmsSolutions)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Check if no build type is specified
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
+endif()
+
 # Add utilities header
 include_directories(${CMAKE_SOURCE_DIR})
 
