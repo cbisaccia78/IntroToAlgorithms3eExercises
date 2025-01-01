@@ -1,0 +1,23 @@
+Use mathematical induction to show that when n is an exact power of 2, the solution of the recurrence
+    T(n) = 2 if n = 2
+    T(n) = 2T(n/2) + n if n = 2^k, k > 1
+
+is equal to T(n) = n*lg_2(n)
+
+
+BASE:
+n = 2: T(2) = 2*lg_2(2) = 2*1 = 2
+
+induction
+
+Assume recurrence holds for T(2^k)
+
+then
+
+T(2^(k+1)) = 2*T(2^k) + 2^(k+1)
+           = 2*2^k*lg_2(2^k) + 2^(k+1)
+           = 2*2^k*k + 2^(k+1)
+           = 2^(k+1) * (k+1)
+           = 2^(k+1) * lg_2(2^(k+1))
+
+Q.E.D
